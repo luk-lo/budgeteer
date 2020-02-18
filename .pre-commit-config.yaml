@@ -1,0 +1,5 @@
+repos:
+    - repo: https://github.com/luk-lo/google-style-precommit-hook
+      rev: bd0ad0e38deb889604acfc914a6cc5b2af273127
+      hooks:
+          - id: google-style-java
