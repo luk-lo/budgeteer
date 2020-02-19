@@ -24,3 +24,7 @@ hs_err_pid*
 
 # storage location of the java formatter used by the formatting pre-commit hook 
 .cache/
+
+# IDE files
+.idea/
+.vscode/
