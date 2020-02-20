@@ -17,6 +17,9 @@ repositories {
 }
 
 dependencies {
+    // To represent amounts of currencies
+    api 'org.joda:joda-money:1.0.1'
+
     // Use JUnit Jupiter API for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     // Use Hamcrest matchers
