@@ -1,0 +1,30 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+}
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    jcenter()
+}
+
+dependencies {
+    // To represent amounts of currencies
+    api 'org.joda:joda-money:1.0.1'
+
+    // Use JUnit Jupiter API for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    // Use Hamcrest matchers
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+
+    // Use JUnit Jupiter Engine for testing.
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0'
+}
+
+test {
+    // Use junit platform for unit tests
+    useJUnitPlatform()
+    testLogging {
+		events "passed", "skipped", "failed"
+	}
+}

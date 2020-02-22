@@ -28,3 +28,21 @@ hs_err_pid*
 # IDE files
 .idea/
 .vscode/
+
+# other
+.classpath
+.settings
+.project
+
+### Gradle ###
+.gradle
+build/
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+### Gradle Patch ###
+**/build/
