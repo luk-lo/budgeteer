@@ -1,2 +1,3 @@
 rootProject.name = 'budgeteer'
 include 'common'
+include 'ui'
