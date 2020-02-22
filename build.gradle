@@ -1,6 +1,20 @@
+plugins {
+    id 'com.diffplug.gradle.spotless' version '3.27.1' apply false
+}
+
 allprojects {
     repositories {
         jcenter()
+    }
+
+    apply plugin: 'com.diffplug.gradle.spotless'
+    spotless {
+        java {
+            googleJavaFormat('1.7')
+            target project.fileTree(project.projectDir) {
+                include '**/*.java'
+            }
+        }
     }
 }
 
