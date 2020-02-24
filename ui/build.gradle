@@ -2,7 +2,6 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.8'
 }
 
-apply plugin: 'java'
 apply plugin: 'application'
 
 javafx {
@@ -11,10 +10,6 @@ javafx {
 }
 
 mainClassName = 'ui.Main'
-
-repositories {
-    jcenter()
-}
 
 dependencies {
     // Use JUnit Jupiter API for testing.

@@ -1,13 +1,27 @@
 plugins {
     id 'com.diffplug.gradle.spotless' version '3.27.1' apply false
+    id 'org.sonarqube' version '2.8'
 }
 
-allprojects {
+sonarqube {
+    properties {
+        property 'sonar.projectKey', 'luk-lo_budgeteer'
+        property 'sonar.organization', 'luk-lo'
+        property 'sonar.host.url', 'https://sonarcloud.io'
+    }
+}
+
+subprojects {
     repositories {
         jcenter()
     }
 
+    version = '0.1'
+
     apply plugin: 'com.diffplug.gradle.spotless'
+    apply plugin: 'jacoco'
+    apply plugin: 'java'
+
     spotless {
         java {
             googleJavaFormat('1.7')
@@ -16,8 +30,18 @@ allprojects {
             }
         }
     }
-}
 
-subprojects {
-    version = '0.1'
+    jacocoTestReport {
+        reports {
+            xml.enabled true
+        }
+    }
+    
+    test {
+        // Use junit platform for unit tests
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
 }
