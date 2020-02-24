@@ -21,6 +21,6 @@ jobs:
       run: ./gradlew clean build
     - name: Run JaCoCo and SonarQube
       env:
-          sonar.login: ${{ SONAR_LOGIN }}
+          sonar.login: ${{ secrets.SONAR_LOGIN }}
       run: ./gradlew jacocoTestReport sonarqube
 
