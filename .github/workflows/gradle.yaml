@@ -27,9 +27,4 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew clean build
-    - name: Run JaCoCo and SonarQube
-      env:
-          sonar.login: ${{ secrets.SONAR_LOGIN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: ./gradlew jacocoTestReport sonarqube
 
