@@ -31,5 +31,5 @@ jobs:
       env:
           sonar.login: ${{ secrets.SONAR_LOGIN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: ./gradlew jacocoTestReport sonarqube
+      run: ./gradlew jacocoTestReport sonarqube --debug
 
