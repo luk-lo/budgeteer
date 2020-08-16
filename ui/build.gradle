@@ -5,7 +5,7 @@ plugins {
 apply plugin: 'application'
 
 javafx {
-    version = '11'
+    version = '13'
     modules = [ 'javafx.controls' ]
 }
 
